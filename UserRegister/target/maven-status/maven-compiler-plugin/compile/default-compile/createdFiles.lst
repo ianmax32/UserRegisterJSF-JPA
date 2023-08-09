@@ -1,0 +1,5 @@
+com\mycompany\userregister\BusinessLayer\UserEJB.class
+com\mycompany\userregister\BusinessLayer\SubjectEJB.class
+com\mycompany\userregister\UserController.class
+com\mycompany\userregister\Entities\Subject.class
+com\mycompany\userregister\Entities\Users.class

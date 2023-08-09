@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Register Home</title>
+        <h:outputStylesheet library="css" name="style.css" />
+    </h:head>
+    <h:body class="main">
+        
+        <h1 class="heading">Register form</h1>
+        <h:form class="form1">
+            <div class="input_layout">
+                <h:outputLabel class="label" for="username">User Name</h:outputLabel>
+                <h:inputText class="input" id="username" value="#{userBean.users.username}" />
+            </div>
+            <div class="input_layout">
+                <h:outputLabel class="label" for="email">Enter your email</h:outputLabel>
+                <h:inputText class="input" id="email" value="#{userBean.users.email}" />
+            </div>
+            <div class="input_layout">
+                <h:outputLabel class="label" for="password">Password</h:outputLabel>
+                <h:inputSecret class="input" id="password" value="#{userBean.users.password}" />
+            </div>
+            <div class="input_layout">
+                <h:outputLabel for="gender">Gender</h:outputLabel>
+                <h:selectOneRadio id="gender" value="#{userBean.users.gender}">
+                    <f:selectItem itemLabel="Male" itemValue="Male" />
+                    <f:selectItem itemLabel="Female" itemValue="Female"/>
+                </h:selectOneRadio>
+            </div>
+            <div class="input_layout">
+                <h:outputLabel for="address">Address</h:outputLabel>
+                <h:inputTextarea id="address" rows="7"  value="#{userBean.users.address}"/>
+            </div>
+            
+            <h:commandButton class="btn" value="Register" action="#{userBean.RegisterUser()}"></h:commandButton>
+        </h:form>
+    </h:body>
+</html>
